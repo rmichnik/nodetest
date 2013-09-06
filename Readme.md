@@ -20,3 +20,4 @@
     git clone https://github.com/rmichnik/nodetest.git
     cd nodetest
     npm install
+    node app.js
