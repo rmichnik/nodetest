@@ -1,0 +1,30 @@
+extends ../layout
+
+block javascripts
+  script(src='/js/user/list.js')
+
+block content
+  .container(ng-controller='UserListCtrl')
+    table.table.table-hover.table-striped.table-bordered
+      thead
+        tr
+          th(colspan=4).text-center
+            h1 USER LIST
+        tr
+          th.text-center.col-lg-3 id
+          th.text-center.col-lg-3 Username
+          th.text-center.col-lg-3 Password
+          th.text-center.col-lg-1 Action
+      each user in data
+        tbody
+          tr
+            td #{user._id}
+            td #{user.username}
+            td #{user.password}
+            td
+              span.pull-left
+                a(href='#', ng-click='remove("#{user._id}")')
+                  i.icon-remove.icon-2x
+              span.pull-right
+                a(href='#', ng-click='')
+                  i.icon-edit.icon-2x

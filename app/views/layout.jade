@@ -1,0 +1,43 @@
+doctype 5
+html(ng-app='Core')
+  head
+    title="ExpressJS Testing"
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap-theme.css')
+    link(rel='stylesheet', href='/libs/font-awesome/css/font-awesome.css')
+    link(rel='stylesheet', href='/css/main.css')
+    block stylesheets
+    script(src='/libs/jquery-1.10.2.js')
+    script(src='/libs/angular.js')
+    script(src='/libs/underscore.js')
+    script(src='/js/main.js')
+    block javascripts
+  body
+    #wrap
+      .navbar.navbar-inverse.navbar-fixed-top
+        .container(ng-controller='MainCtrl')
+          .navbar-collapse.collapse.header-menu
+            ul.nav.navbar-nav
+              li
+                a(href='/') Start
+            ul.nav.navbar-nav
+              li
+                a(href='/user/new') New
+            .navbar-form.navbar-right
+              .container(ng-show='showFormLogin')
+                .form-group
+                  input.form-control(type='text', placeholder='Login', ng-model='formData.username')
+                .form-group
+                  input.form-control(type='password', placeholder='Password', ng-model='formData.password')
+                .form-group
+                  input.form-control.btn.btn-success.btn-xs(type='button', value='Login', ng-click='doLogin()')
+              .container(ng-hide='showFormLogin')
+                p Hello, {{userData.username}}
+                  | &nbsp;&nbsp;
+                  input.btn.btn-danger.btn-xs(type='button', ng-click='logout()', value='Logout')
+      .container
+        block content
+    #footer
+      .container
+        p.address My footer page, edit it on layout.jade
+    script(src='/libs/bootstrap/js/bootstrap.js')

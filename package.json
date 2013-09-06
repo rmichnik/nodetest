@@ -1,13 +1,19 @@
 {
-  "name": "application-name",
+  "name": "rmc-node-test",
   "version": "0.0.1",
+  "author": "Renato Michnik de Carvalho <renato@rmc.inf.br>",
+  "description": "simple nodejs test",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
     "express": "3.3.5",
+    "mongoose": "*",
+    "connect-mongo": "*",
     "jade": "*",
-    "knex": "~0.2.1"
+    "passport": "*",
+    "passport-local": "*",
+    "underscore": "*"
   }
 }

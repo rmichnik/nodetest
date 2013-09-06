@@ -1,0 +1,40 @@
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-new-user {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-new-user .form-new-user-heading,
+.form-new-user .checkbox {
+    margin-bottom: 10px;
+}
+.form-new-user .checkbox {
+    font-weight: normal;
+}
+.form-new-user .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-new-user .form-control:focus {
+    z-index: 2;
+}
+.form-new-user input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-new-user input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}

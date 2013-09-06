@@ -1,0 +1,17 @@
+extends ../layout
+block javascripts
+  script(src='/js/user/new.js')
+
+block stylesheets
+  link(rel='stylesheet', href='/css/user/new.css')
+
+block content
+  .form-new-user(ng-controller='UserCtrl')
+    h2.form-new-user-heading New User
+    .form-group
+      label(for='username')
+      input#username.form-control(type='text', ng-model='formData.username', placeholder='Username')
+    .form-group
+      label(for='password')
+      input#password.form-control(type='password', ng-model='formData.password', placeholder='Password')
+    input.btn.btn-primary(type='button', value='Create', ng-click='new()')
