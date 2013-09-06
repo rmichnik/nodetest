@@ -11,6 +11,10 @@
     Jade
     Passport
     Passport-local
+    AngularJS
+    UnderscoreJS
+    Bootstrap 3.0
+    Font-awesome
 
 ## Install
     git clone https://github.com/rmichnik/nodetest.git
